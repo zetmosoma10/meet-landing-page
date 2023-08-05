@@ -54,3 +54,45 @@ h2 {
     font-size: 1.8rem;
   }
 }
+
+/* Button */
+
+.btn {
+  border: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn--big {
+  padding: 2rem 4rem;
+  border-radius: 30px;
+}
+
+.btn--big_primary {
+  background: var(--color-primary);
+}
+
+.btn--big_primary .btn-icon {
+  color: var(--color-primary-hover);
+}
+
+.btn--big_secondary {
+  background: var(--color-secondary);
+}
+
+.btn--big_secondary .btn-icon {
+  color: var(--color-secondary-hover);
+}
+
+.btn--small {
+  border-radius: 30px;
+  background: var(--color-secondary);
+  padding: 2rem 3rem;
+}
