@@ -1,0 +1,56 @@
+:root {
+  --color-primary: #4d96a9;
+  --color-secondary: #855fb1;
+  --color-headings: #28283d;
+  --color-text: #87879d;
+  --color-background: #fafafa;
+  --color-primary-hover: #8fe3f9;
+  --color-secondary-hover: #d9b8ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-text);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2 {
+  color: var(--color-headings);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
