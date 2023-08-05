@@ -26,6 +26,13 @@ body {
   font-size: 1.6rem;
 }
 
+.blue-text {
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
 h1,
 h2 {
   color: var(--color-headings);
@@ -95,4 +102,69 @@ h2 {
   border-radius: 30px;
   background: var(--color-secondary);
   padding: 2rem 3rem;
+}
+
+/* Images */
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Grids */
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .grid-3x1 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .item-2 {
+    order: 3;
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-3x1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.one {
+  width: 100%;
+  height: 300px;
+  background: palevioletred;
+}
+.two {
+  width: 100%;
+  height: 300px;
+  background: black;
+}
+.three {
+  width: 100%;
+  height: 300px;
+  background: greenyellow;
 }
