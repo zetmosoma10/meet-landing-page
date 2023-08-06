@@ -276,3 +276,10 @@ h2 {
     background-image: url(Assets/desktop/image-footer.jpg);
   }
 }
+
+/* Nav */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
