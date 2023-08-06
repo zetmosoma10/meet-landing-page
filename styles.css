@@ -71,9 +71,11 @@ h2 {
   color: #fff;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin: 1rem;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   opacity: 0.7;
 }
 
@@ -102,6 +104,21 @@ h2 {
   border-radius: 30px;
   background: var(--color-secondary);
   padding: 2rem 3rem;
+  margin-top: ;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 350px) {
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* Images */
@@ -127,6 +144,19 @@ h2 {
   gap: 2.4rem;
 }
 
+.grid-3x1 img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.item-1 {
+  justify-self: end;
+}
+
+.item-3 {
+  justify-self: start;
+}
+
 @media screen and (min-width: 768px) {
   .grid-2x2 {
     grid-template-columns: repeat(4, 1fr);
@@ -138,7 +168,7 @@ h2 {
 @media screen and (max-width: 1439px) {
   .grid-3x1 {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
   .item-2 {
@@ -150,6 +180,11 @@ h2 {
 @media screen and (min-width: 1440px) {
   .grid-3x1 {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  .item-2 {
+    align-self: center;
   }
 }
 
@@ -175,4 +210,27 @@ h2 {
   border: 0.1px solid var(--color-text);
   position: absolute;
   top: -85px;
+}
+
+/* Hero */
+
+.hero__content {
+  text-align: center;
+}
+
+.hero__heading {
+  margin-bottom: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.hero__description {
+  margin-bottom: 3.2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero__heading {
+    margin-bottom: 3.4rem;
+  }
 }
